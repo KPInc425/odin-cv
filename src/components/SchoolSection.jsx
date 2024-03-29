@@ -1,5 +1,5 @@
-import CompletedField from "./CompletedField";
-import Input from "./Input";
+import CompletedField from "./shared/CompletedField";
+import Input from "./shared/Input";
 import SchoolData from "./SchoolData";
 
 const SchoolSection = ({ formData, setFormData, canEdit }) => {
@@ -35,10 +35,12 @@ const SchoolSection = ({ formData, setFormData, canEdit }) => {
             canEdit={canEdit}
           />
         ))}
-        <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
-          <button onClick={handleAddSchool}>Add</button>
-          <button onClick={handleRemoveSchool}>Remove</button>
-        </div>
+        {canEdit && 
+          <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
+            <button onClick={handleAddSchool}>Add</button>
+            <button onClick={handleRemoveSchool}>Remove</button>
+          </div>
+        }
       </div>
     </section>
   );

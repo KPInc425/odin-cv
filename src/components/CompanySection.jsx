@@ -33,10 +33,12 @@ const CompanySection = ({ formData, setFormData, canEdit }) => {
             canEdit={canEdit}
           />
         ))}
-        <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
-          <button onClick={handleAddCompany}>Add</button>
-          <button onClick={handleRemoveCompany}>Remove</button>
-        </div>
+        {canEdit && 
+          <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
+            <button onClick={handleAddCompany}>Add</button>
+            <button onClick={handleRemoveCompany}>Remove</button>
+          </div>
+        }
       </div>
     </section>
   );

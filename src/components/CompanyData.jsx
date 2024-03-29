@@ -1,5 +1,5 @@
-import CompletedField from "./CompletedField";
-import Input from "./Input";
+import CompletedField from "./shared/CompletedField";
+import Input from "./shared/Input";
 
 const CompanyData = ({ companyData, setCompanyData, canEdit }) => {
   const handleCompanyNameChange = (e) => {

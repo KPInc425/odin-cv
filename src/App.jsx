@@ -10,7 +10,7 @@ function App() {
   const [isEditable, setIsEditable] = useState(true);
   const [personalFormData, setPersonalFormData] = useState(
     {
-      firstName: "Howdy", 
+      firstName: "", 
       lastName: "", 
       email: "", 
       phone: "", 
@@ -44,7 +44,7 @@ function App() {
       <PersonalSection formData={personalFormData} setFormData={setPersonalFormData} canEdit={isEditable} />
       <SchoolSection formData={schoolFormData} setFormData={setSchoolFormData} canEdit={isEditable} />
       <CompanySection formData={companyFormData} setFormData={setCompanyFormData} canEdit={isEditable} />
-      <button style={{marginTop: '1rem'}} onClick={handleEditToggle}>{isEditable ? "Save" : "Edit"}</button>
+      <button style={{marginTop: '1rem', width: '100%'}} onClick={handleEditToggle}>{isEditable ? "Save" : "Edit"}</button>
     </>
   )
 }
