@@ -1,0 +1,6 @@
+.job-responsibility-textarea {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-weight: 700;
+}

@@ -1,0 +1,3 @@
+:root:has(select option[value="dark"]:checked) {
+  
+}

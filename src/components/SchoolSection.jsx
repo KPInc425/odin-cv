@@ -26,7 +26,7 @@ const SchoolSection = ({ formData, setFormData, canEdit }) => {
   return (
     <section>
       <h2>School Data</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div className="editable-flex">
         {formData.map((data) => (
           <SchoolData
             key={data.id}
@@ -35,12 +35,12 @@ const SchoolSection = ({ formData, setFormData, canEdit }) => {
             canEdit={canEdit}
           />
         ))}
-        {canEdit && 
-          <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
+        {canEdit && (
+          <div className="add-remove-button-container">
             <button onClick={handleAddSchool}>Add</button>
             <button onClick={handleRemoveSchool}>Remove</button>
           </div>
-        }
+        )}
       </div>
     </section>
   );

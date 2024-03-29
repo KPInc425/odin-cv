@@ -1,0 +1,15 @@
+.completed-container {
+  /* text-align: start; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+
+.completed-container > p:first-of-type {
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}

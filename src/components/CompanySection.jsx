@@ -4,7 +4,14 @@ const CompanySection = ({ formData, setFormData, canEdit }) => {
   const handleAddCompany = () => {
     setFormData([
       ...formData,
-      { id: formData.length, company: "", position: "", startDate: "", endDate: "", responsibilty: "" },
+      {
+        id: formData.length,
+        company: "",
+        position: "",
+        startDate: "",
+        endDate: "",
+        responsibilty: "",
+      },
     ]);
   };
 
@@ -23,8 +30,8 @@ const CompanySection = ({ formData, setFormData, canEdit }) => {
 
   return (
     <section>
-      <h2>School Data</h2>
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <h2>Company Data</h2>
+      <div className="editable-flex">
         {formData.map((data) => (
           <CompanyData
             key={data.id}
@@ -33,12 +40,12 @@ const CompanySection = ({ formData, setFormData, canEdit }) => {
             canEdit={canEdit}
           />
         ))}
-        {canEdit && 
-          <div style={{ display: "flex", gap: "0.25rem", justifyContent: "end" }}>
+        {canEdit && (
+          <div className="add-remove-button-container">
             <button onClick={handleAddCompany}>Add</button>
             <button onClick={handleRemoveCompany}>Remove</button>
           </div>
-        }
+        )}
       </div>
     </section>
   );

@@ -24,13 +24,7 @@ const SchoolData = ({ schoolData, setSchoolData, canEdit }) => {
   return (
     <>
       {canEdit ? (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            columnGap: "1rem",
-          }}
-        >
+        <div className="data-grid">
           <Input
             inputLabel="School Name"
             inputType="text"
@@ -57,13 +51,7 @@ const SchoolData = ({ schoolData, setSchoolData, canEdit }) => {
           />
         </div>
       ) : (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            columnGap: "1rem",
-          }}
-        >
+        <div className="data-grid">
           <CompletedField
             fieldLabel="School Name"
             fieldValue={schoolData.name}

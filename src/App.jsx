@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.css'
 import PersonalSection from './components/PersonalSection'
 import SchoolSection from './components/SchoolSection'
 import CompanySection from './components/CompanySection'
+import DarkLightToggle from './components/shared/DarkLightToggle'
 
 function App() {
   const [isEditable, setIsEditable] = useState(true);
@@ -41,10 +42,12 @@ function App() {
 
   return (
     <>
+      <h1>Odin CV</h1>
+      <DarkLightToggle />
       <PersonalSection formData={personalFormData} setFormData={setPersonalFormData} canEdit={isEditable} />
       <SchoolSection formData={schoolFormData} setFormData={setSchoolFormData} canEdit={isEditable} />
       <CompanySection formData={companyFormData} setFormData={setCompanyFormData} canEdit={isEditable} />
-      <button style={{marginTop: '1rem', width: '100%'}} onClick={handleEditToggle}>{isEditable ? "Save" : "Edit"}</button>
+      <button className='save-edit-button' onClick={handleEditToggle}>{isEditable ? "Save" : "Edit"}</button>
     </>
   )
 }

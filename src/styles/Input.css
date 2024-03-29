@@ -1,0 +1,6 @@
+.data-input {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
