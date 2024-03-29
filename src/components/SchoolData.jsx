@@ -3,23 +3,18 @@ import Input from "./shared/Input";
 
 const SchoolData = ({ schoolData, setSchoolData, canEdit }) => {
   const handleNameChange = (e) => {
-    console.log(e.target.value);
     setSchoolData({ ...schoolData, name: e.target.value }, schoolData.id);
   };
   const handleStudyChange = (e) => {
-    console.log(e.target.value);
     setSchoolData(
       { ...schoolData, areaOfStudy: e.target.value },
       schoolData.id
     );
   };
   const handleDateChange = (e) => {
-    console.log(e.target.value);
     setSchoolData({ ...schoolData, date: e.target.value }, schoolData.id);
   };
 
-  console.log(canEdit);
-  console.log(schoolData);
 
   return (
     <>

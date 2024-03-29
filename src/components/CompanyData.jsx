@@ -4,29 +4,24 @@ import "../styles/CompanyData.css"
 
 const CompanyData = ({ companyData, setCompanyData, canEdit }) => {
   const handleCompanyNameChange = (e) => {
-    console.log(e.target.value);
     setCompanyData({ ...companyData, company: e.target.value }, companyData.id);
   };
   const handlePositionChange = (e) => {
-    console.log(e.target.value);
     setCompanyData(
       { ...companyData, position: e.target.value },
       companyData.id
     );
   };
   const handleStartDateChange = (e) => {
-    console.log(e.target.value);
     setCompanyData(
       { ...companyData, startDate: e.target.value },
       companyData.id
     );
   };
   const handleEndDateChange = (e) => {
-    console.log(e.target.value);
     setCompanyData({ ...companyData, endDate: e.target.value }, companyData.id);
   };
   const handleResponsibilityChange = (e) => {
-    console.log(e.target.value);
     setCompanyData(
       { ...companyData, responsibility: e.target.value },
       companyData.id

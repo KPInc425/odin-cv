@@ -3,23 +3,18 @@ import Input from "./shared/Input";
 
 const PersonalSection = ({ formData, setFormData, canEdit }) => {
   const handleFirstNameChange = (e) => {
-    console.log(e.target.value);
     setFormData({ ...formData, firstName: e.target.value });
   };
   const handleLastNameChange = (e) => {
-    console.log(e.target.value);
     setFormData({ ...formData, lastName: e.target.value });
   };
   const handleEmailChange = (e) => {
-    console.log(e.target.value);
     setFormData({ ...formData, email: e.target.value });
   };
   const handlePhoneChange = (e) => {
-    console.log(e.target.value);
     setFormData({ ...formData, phone: e.target.value });
   };
 
-  console.log(canEdit);
 
   return (
     <section>
