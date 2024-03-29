@@ -16,7 +16,7 @@ const CompanySection = ({ formData, setFormData, canEdit }) => {
 
   const handleSetCompanyData = (companyData, companyId) => {
     const updatedArray = formData.map((company) => {
-      return companyData.id === companyId ? { ...companyData } : company;
+      return company.id === companyId ? { ...companyData } : company;
     });
     setFormData([...updatedArray]);
   };

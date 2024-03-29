@@ -71,7 +71,7 @@ const CompanyData = ({ companyData, setCompanyData, canEdit }) => {
           />
           <label htmlFor={`responsibility${companyData.id}`} style={{gridColumnEnd: 'span 2', display: 'flex', flexDirection: 'column', textAlign: 'start', fontWeight: '700'}}>
             Responsibility
-            <textarea id={`responsibility${companyData.id}`} name={`responsibility${companyData.id}`} rows="5" onChange={handleResponsibilityChange}></textarea>
+            <textarea id={`responsibility${companyData.id}`} name={`responsibility${companyData.id}`} value={companyData.responsibility} rows="5" onChange={handleResponsibilityChange}></textarea>
           </label>
         </div>
       ) : (
